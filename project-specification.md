@@ -1,4 +1,4 @@
-# Projektová specifikace: Labská Vlna 2027
+# Projektová specifikace a datová základna: Labská Vlna 2027
 
 ## Identita festivalu
 
@@ -13,56 +13,64 @@
 
 ## Účel webu
 
-*   **K čemu web slouží:** Web je hlavním informačním portálem pro návštěvníky nového elektronického festivalu. Slouží k prezentaci DJs a orientaci v nočním programu.
-*   **Hlavní cíle:** Nalákat fanoušky elektronické hudby na jedinečnou atmosféru u řeky, přehledně odprezentovat line-up 60 DJs a předat logistické informace (stanování, kyvadlová doprava).
+*   **K čemu web slouží:** Web je navržen jako hlavní informační portál a digitální průvodce pro návštěvníky nového festivalu elektronické hudby. Poskytuje detailní přehled o umělcích a funguje jako nezbytný nástroj pro orientaci v nočním programu přímo na místě.
+*   **Hlavní cíle:** Prvotním cílem je nalákat fanoušky elektronické hudby na vizuálně atraktivní prezentaci festivalu a prodat vstupenky. Během samotné akce je cílem zajistit, aby se návštěvníci snadno orientovali v areálu i v harmonogramu a měli k dispozici veškeré logistické instrukce (stanování, doprava).
 *   **Důležité akce uživatelů:**
-    *   Procházení harmonogramu na dvou odlišných scénách (Bass vs. Techno).
-    *   Vyhledávání konkrétních DJs podle subžánrů elektroniky.
-    *   Zjišťování praktických informací pro kempování.
+    *   Vyhledávání a filtrování konkrétních DJs podle subžánrů elektronické hudby.
+    *   Procházení časového harmonogramu (Timetable) rozděleného podle scén (Riverbass Stage vs. Pulse Shelter).
+    *   Sestavování vlastního osobního programu (ukládání setů do oblíbených).
+    *   Zjišťování praktických informací pro bezproblémové kempování a dopravu do areálu.
 
 ## Cílové skupiny
 
-1.  **Fanoušci elektronické hudby a Ravers (18-35 let)**
-    *   **Potřeby:** Zjistit přesné časy setů svých oblíbených DJs, aby nepropásli hlavní headlinery.
-    *   **Očekávání:** Moderní, "dark mode" web s neonovými prvky, který se rychle načte na mobilu i uprostřed davu.
-    *   **Informace na webu:** Interaktivní program s časy (timetable), filtrování podle žánrů (DnB, Techno).
-2.  **Místní obyvatelé z okolí Kostelce**
-    *   **Potřeby:** Zjistit, dokdy bude trvat hlučná noční produkce a jaká jsou omezení.
-    *   **Očekávání:** Jasné logistické instrukce a kontakt na pořadatele.
-    *   **Informace na webu:** Sekce praktických informací zaměřená na harmonogram a bezpečnost.
+1.  **Fanoušci elektronické hudby a Ravers (18–35 let)**
+    *   **Potřeby:** Zjistit přesné časy setů svých oblíbených interpretů napříč scénami, aby dokázali plynule přecházet mezi pódii a nepropásli hlavní headlinery.
+    *   **Očekávání:** Responzivní, tmavý "dark mode" design, který neoslňuje v noci. Web se musí rychle načítat i v místech s horším mobilním signálem uprostřed davu.
+    *   **Informace a funkce:** Interaktivní Timetable s možností filtrace, detailní profily interpretů, možnost vytvořit si vlastní line-up.
+2.  **Místní obyvatelé z okolí Kostelce a běžní návštěvníci kempu**
+    *   **Potřeby:** Zjistit dopravní omezení, kapacity parkovišť, pravidla chování v kempu a informace o hlukových limitech (dokdy trvá noční produkce).
+    *   **Očekávání:** Snadno dohledatelné oficiální informace bez nutnosti probírat se hudebním obsahem. Zřetelné kontakty na pořadatele.
+    *   **Informace a funkce:** Přehledná sekce FAQ, mapa areálu s vyznačenými zónami a únikovými východy, jízdní řády kyvadlové dopravy.
 
 ## Informační architektura
 
-*   **Struktura webu / sitemap:**
-    *   Úvodní stránka (Rozcestník, aktuální info)
-    *   Timetable (Časový harmonogram)
-    *   DJs / Line-up (Seznam 60 interpretů s filtrem na žánry)
-    *   Scény (Popis Bass River Stage a Techno Tent)
-    *   Info & Kemp (Doprava, ubytování, pravidla)
-*   **Hlavní navigace:** Trvale viditelné menu v horní části webu (Domů | Timetable | DJs | Info & Kemp).
-*   **Vztahy a účel jednotlivých částí:**
-    *   *Úvodní stránka:* Uvítání, vizuál festivalu, největší jména.
-    *   *Timetable:* Časová osa vystoupení. U elektroniky je klíčové, že program běží od podvečera do ranních hodin.
-    *   *DJs / Line-up:* Abecední seznam s možností filtrace (DnB, Techno, House). Detail obsahuje žánr a čas setu.
-    *   *Scény:* Informace o kapacitě (velká Bass stage venku, temný Techno stan).
-    *   *Můj festival (Interaktivní část):* Návštěvník si může vygenerovat vlastní plán setů.
+**Struktura webu / sitemap:**
+*   Úvodní stránka (Rozcestník, vizuál, aktuality)
+*   Timetable (Časový harmonogram s rozdělením na dny a scény)
+*   DJs / Line-up (Seznam 60 interpretů s filtrem žánrů)
+    *   Detail interpreta
+*   Scény (Kapacita a zaměření Riverbass Stage a Pulse Shelter)
+*   Můj festival (Osobní program a uložené sety)
+*   Info & Kemp (Doprava, ubytování, pravidla a FAQ)
+
+**Hlavní navigace:** 
+Trvale ukotvené menu v horní části webu: `Domů | Timetable | DJs | Scény | Můj festival | Info & Kemp`.
+
+**Vztahy a popis jednotlivých částí:**
+*   *Úvodní stránka:* Slouží jako rozcestník na nejdůležitější sekce s odpočtem do začátku akce.
+*   *Timetable:* Časová osa vystoupení. Kliknutím na set se otevře detail interpreta.
+*   *DJs / Line-up:* Abecední seznam s možností filtrace (DnB, Techno, House). Proklik vede na samostatný profil interpreta, kde je zobrazen i čas a místo jeho vystoupení.
+*   *Můj festival (Interaktivní část):* Zde se shromažďují sety, které si uživatel označil v programu hvězdičkou. Funguje to jako personalizovaný harmonogram.
+
+**Zařazování programu po půlnoci (Datová vs. Prezentační logika):**
+Datová základna webu ukládá kalendářní data přesně chronologicky (set v sobotu v 01:00 ráno má u sebe datum 19. 6.). Na uživatelském rozhraní (frontendu) v sekci Timetable se však tyto sety logicky řadí pod "Páteční večer", protože tvoří jeden souvislý programový blok (páteční program trvá od 18:00 do 04:00 následujícího dne).
 
 ## Uživatelské scénáře
 
-**Scénář 1: Plánování nočního maratonu**
+**Scénář 1: Plánování nočního maratonu a uložení do vlastního programu**
 *   **Typ uživatele:** Fanoušek Drum & Bass.
-*   **Cíl:** Zjistit, v kolik hraje hlavní hvězda DnB scény, a uložit si to.
-*   **Výchozí situace:** Uživatel sedí s kamarády u stanu v pátek večer a domlouvají se, kdy vyrazí k pódiu.
-*   **Očekávaný výsledek:** Otevře "Timetable", vybere pátek a Bass River Stage, najde set od 01:00 a označí si ho.
+*   **Cíl:** Zjistit, v kolik hraje hlavní hvězda páteční DnB scény, uložit si ji a mít ji rychle po ruce.
+*   **Výchozí situace:** Uživatel sedí s kamarády u stanu v pátek večer a na mobilním telefonu domlouvají, kdy vyrazí do areálu.
+*   **Očekávaný výsledek:** Uživatel na webu otevře "Timetable", vybere páteční program a zaměří se na sloupec "Riverbass Stage". Zjistí, že hlavní set probíhá v čase 01:00 (v rámci pátečního nočního bloku) a klikne u něj na ikonu hvězdičky (uložit). Pro opětovné zobrazení svého výběru v průběhu noci uživatel kdykoliv klikne v hlavní navigaci na "Můj festival", kde vidí všechny takto uložené sety pohromadě a nemusí znovu procházet kompletní program.
 
 **Scénář 2: Objevování Techno producentů**
 *   **Typ uživatele:** Milovník underground techna.
-*   **Cíl:** Najít všechny Techno DJs v line-upu.
-*   **Výchozí situace:** Uživatel si prohlíží web před nákupem lístku a chce vědět, jestli je tam dostatek techno jmen.
-*   **Očekávaný výsledek:** Přejde na stránku "DJs", klikne na filtr "Techno" a prohlédne si vyfiltrovaný seznam producentů.
+*   **Cíl:** Najít všechny Techno DJs v line-upu a seznámit se s jejich profily.
+*   **Výchozí situace:** Uživatel si prohlíží web před nákupem lístku a chce zjistit, kolik "Techno" a "Hard Techno" jmen letos vystoupí.
+*   **Očekávaný výsledek:** Přejde na stránku "DJs" přes hlavní navigaci. Klikne na filtr "Techno". Zobrazí se mu vyfiltrovaný seznam (např. interpret Kaelen, X-Form). Klikne na jedno z jmen a na stránce detailu si přečte profil a zjistí, že interpret hraje na "Pulse Shelter" scéně.
 
 **Scénář 3: Informace o kyvadlové dopravě**
-*   **Typ uživatele:** Návštěvník cestující vlakem z Prahy.
-*   **Cíl:** Zjistit, jak se dostane z nádraží do areálu kempu.
-*   **Výchozí situace:** Uživatel je ve vlaku směr Kostelec.
-*   **Očekávaný výsledek:** Klikne na "Info & Kemp", sekce Doprava, kde najde jízdní řád festivalových autobusů od nádraží.
+*   **Typ uživatele:** Návštěvník, který jede na festival poprvé vlakem.
+*   **Cíl:** Zjistit, jak a v jakých intervalech se dostane z nádraží do areálu kempu.
+*   **Výchozí situace:** Uživatel právě sedí ve vlaku směřujícím do Kostelce a potřebuje logistické instrukce k příjezdu.
+*   **Očekávaný výsledek:** Uživatel klikne v navigaci na "Info & Kemp". V postranním menu zvolí sekci "Doprava", kde ihned vidí mapku nádraží, místo nástupu do kyvadlového autobusu a frekvenci jeho odjezdů.
