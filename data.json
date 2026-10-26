@@ -3,25 +3,35 @@
         "name": "Labská Vlna",
         "year": 1,
         "location": "Kemp u řeky, Kostelec nad Labem",
-        "dates": [
-            "2027-06-18",
-            "2027-06-19",
-            "2027-06-20",
-            "2027-06-21"
-        ],
+        "dates": ["2027-06-18", "2027-06-19", "2027-06-20", "2027-06-21"],
         "type": "Electronic Music Festival"
     },
-    "scenes": [
+    "tickets": [
         {
-            "id": "S1",
-            "name": "Riverbass Stage",
-            "capacity": 3000
+            "id": "T1",
+            "name": "Standard Pass (3 dny)",
+            "price": 1490,
+            "currency": "Kč",
+            "description": "Základní vstupenka do areálu na celý festivalový víkend."
         },
         {
-            "id": "S2",
-            "name": "Pulse Shelter",
-            "capacity": 2000
+            "id": "T2",
+            "name": "VIP Pass (3 dny)",
+            "price": 2990,
+            "currency": "Kč",
+            "description": "Zahrnuje VIP kemp, fast-track vstup a přístup na vyvýšenou tribunu s vlastním barem."
+        },
+        {
+            "id": "T3",
+            "name": "Jednodenní vstupenka",
+            "price": 790,
+            "currency": "Kč",
+            "description": "Platí pro libovolný jeden den festivalu (Pátek, Sobota nebo Neděle)."
         }
+    ],
+    "scenes": [
+        { "id": "S1", "name": "Riverbass Stage", "capacity": 3000 },
+        { "id": "S2", "name": "Pulse Shelter", "capacity": 2000 }
     ],
     "performers": [
         { "id": "P1", "name": "Sublimit", "genre": "Drum & Bass", "description": "Temná atmosféra a hypnotický Drum & Bass." },
