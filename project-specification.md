@@ -76,7 +76,7 @@ Datová základna webu ukládá kalendářní data přesně chronologicky (set v
 *   **Typ uživatele:** Návštěvník, který jede na festival poprvé vlakem.
 *   **Cíl:** Zjistit, jak a v jakých intervalech se dostane z nádraží do areálu kempu.
 *   **Výchozí situace:** Uživatel právě sedí ve vlaku směřujícím do Kostelce a potřebuje logistické instrukce k příjezdu.
-*   **Očekávaný výsledek:** Uživatel klikne v navigaci na "Info & Kemp". V postranním menu zvolí sekci "Doprava", kde ihned vidí mapku nádraží, místo nástupu do kyvadlového autobusu a frekvenci jeho odjezdů.
+*   **Očekávaný výsledek:** Uživatel klikne v navigaci na "Info & Kemp". Přečte si informaci o dopravě z nádraží do kempu.
 
 **Scénář 4: Nákup vstupenky**
 *   **Typ uživatele:** Nový zájemce o festival.
