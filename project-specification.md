@@ -52,7 +52,7 @@ Trvale ukotvené menu v horní části webu: `Domů | Vstupenky | Timetable | DJ
 *   *Úvodní stránka:* Slouží jako rozcestník na nejdůležitější sekce s CTA tlačítkem k nákupu.
 *   *Vstupenky:* Přehled typů lístků (Standard, VIP, Jednodenní) s možností okamžitého nákupu do košíku.
 *   *Timetable:* Časová osa vystoupení. Kliknutím na set se otevře detail interpreta.
-*   *DJs / Line-up:* Abecední seznam s možností filtrace (DnB, Techno, House). Proklik vede na samostatný profil interpreta, kde je zobrazen i čas a místo jeho vystoupení.
+*   *DJs / Line-up:* Seznam s možností filtrace (DnB, Techno, House). 
 *   *Můj festival (Interaktivní část):* Zde se shromažďují sety, které si uživatel označil v programu hvězdičkou. Funguje to jako personalizovaný harmonogram.
 
 **Zařazování programu po půlnoci (Datová vs. Prezentační logika):**
